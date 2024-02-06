@@ -7,9 +7,13 @@
         public int Age { get; set; }
         public string HairColor { get; set; }
 
-        public Person(string name, int age, string hairColor)
+        public Person()
         {
             Id = Guid.NewGuid();
+        }
+        public Person(string name, int age, string hairColor)
+        {
+            
             Name = name;
             Age = age;
             HairColor = hairColor;

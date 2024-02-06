@@ -1,8 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Home Page</h2>
+
+<form method="post" action="/create-person">
+    <input type="text" name="Name" placeholder="Nome" required />
+    <input type="number" name="Age" placeholder="Idade" required />
+    <input type="text" name="HairColor" placeholder="Cor do Cabelo" required />
+    <button type="submit">Salvar</button>
+</form>

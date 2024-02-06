@@ -1,3 +1,4 @@
+using Marten;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApp.Models;
@@ -28,5 +29,18 @@ namespace WebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public ActionResult About(Person person)
+        {
+            return View(person);
+        }
+        [HttpPost("/create-person")]
+        public async Task<IActionResult> CreatePerson([FromForm] Person person, [FromServices] IDocumentSession session)
+        {
+            session.Store(person);
+            await session.SaveChangesAsync();
+            return Redirect("/");
+        }
+
+
     }
 }
