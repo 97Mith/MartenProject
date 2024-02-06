@@ -161,3 +161,5 @@ C:\Users\Matheus\Desktop\CSharp\Marten\WebApp\obj\Debug\net8.0\WebApp.pdb
 C:\Users\Matheus\Desktop\CSharp\Marten\WebApp\obj\Debug\net8.0\WebApp.genruntimeconfig.cache
 C:\Users\Matheus\Desktop\CSharp\Marten\WebApp\obj\Debug\net8.0\ref\WebApp.dll
 C:\Users\Matheus\Desktop\CSharp\Marten\WebApp\obj\Debug\net8.0\WebApp.sourcelink.json
+C:\Users\Matheus\Desktop\CSharp\Marten\WebApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Matheus\Desktop\CSharp\Marten\WebApp\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll

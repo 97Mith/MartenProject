@@ -38,5 +38,9 @@ app.MapGet("/click", async (IDocumentSession session) =>
     return "Pessoa adicionada!";
 
 });
+app.MapGet("/list", (IQuerySession session) =>
+{
+    return session.Query<Person>().ToListAsync();
+});
 
 app.Run();

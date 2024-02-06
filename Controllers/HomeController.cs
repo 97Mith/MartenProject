@@ -2,6 +2,8 @@ using Marten;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApp.Models;
+using WebApp.Repository;
+
 
 namespace WebApp.Controllers
 {
@@ -29,7 +31,7 @@ namespace WebApp.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public ActionResult About(Person person)
+        public ActionResult ListPage(Person person)
         {
             return View(person);
         }
@@ -40,7 +42,15 @@ namespace WebApp.Controllers
             await session.SaveChangesAsync();
             return Redirect("/");
         }
+        
+        private readonly IRepository _repository = new Repository.Repository();
 
+        
+        public ActionResult ListPage()
+        {
+            var people = _repository.All();
+            return View(people);
+        }
 
     }
 }
